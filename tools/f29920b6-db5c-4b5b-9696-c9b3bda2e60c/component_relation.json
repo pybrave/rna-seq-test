@@ -1,0 +1,86 @@
+{
+    "name": "Enrichment analysis",
+    "img": null,
+    "tags": null,
+    "category": "Downstream analysis",
+    "description": null,
+    "prompt": null,
+    "dag_definition": {
+        "nodes": [
+            {
+                "script_id": "4a34dad8-7ad6-4daf-9cdb-5cfb8f64d611",
+                "scatter": {
+                    "field": "counts",
+                    "mode": "each"
+                },
+                "position": {
+                    "x": -85.5,
+                    "y": -213.5
+                }
+            },
+            {
+                "script_id": "953575ee-acd4-4ff9-b050-ee0e0ba8bfcb",
+                "position": {
+                    "x": 47,
+                    "y": -110
+                }
+            },
+            {
+                "script_id": "f516cf1f-4dd1-42ed-9550-0474f24d9b00",
+                "position": {
+                    "x": 240.5,
+                    "y": -123.5
+                }
+            },
+            {
+                "script_id": "e6b62165-4cbe-4df1-a7eb-c0113a3ba45e",
+                "position": {
+                    "x": 241.22665454937737,
+                    "y": -38.840363128337245
+                }
+            }
+        ],
+        "edges": [
+            {
+                "source": "4a34dad8-7ad6-4daf-9cdb-5cfb8f64d611",
+                "sourceHandle": "degs",
+                "target": "953575ee-acd4-4ff9-b050-ee0e0ba8bfcb",
+                "targetHandle": "deg",
+                "id": "xy-edge__4a34dad8-7ad6-4daf-9cdb-5cfb8f64d611degs-953575ee-acd4-4ff9-b050-ee0e0ba8bfcbdeg"
+            },
+            {
+                "source": "953575ee-acd4-4ff9-b050-ee0e0ba8bfcb",
+                "sourceHandle": "gene_id_mapping",
+                "target": "f516cf1f-4dd1-42ed-9550-0474f24d9b00",
+                "targetHandle": "gene_id_mapping",
+                "id": "xy-edge__953575ee-acd4-4ff9-b050-ee0e0ba8bfcbgene_id_mapping-f516cf1f-4dd1-42ed-9550-0474f24d9b00gene_id_mapping"
+            },
+            {
+                "source": "953575ee-acd4-4ff9-b050-ee0e0ba8bfcb",
+                "sourceHandle": "kegg_enrichment",
+                "target": "f516cf1f-4dd1-42ed-9550-0474f24d9b00",
+                "targetHandle": "kegg_enrichment",
+                "id": "xy-edge__953575ee-acd4-4ff9-b050-ee0e0ba8bfcbkegg_enrichment-f516cf1f-4dd1-42ed-9550-0474f24d9b00kegg_enrichment"
+            },
+            {
+                "source": "953575ee-acd4-4ff9-b050-ee0e0ba8bfcb",
+                "sourceHandle": "kegg_enrich_rds",
+                "target": "e6b62165-4cbe-4df1-a7eb-c0113a3ba45e",
+                "targetHandle": "rds",
+                "id": "xy-edge__953575ee-acd4-4ff9-b050-ee0e0ba8bfcbkegg_enrich_rds-e6b62165-4cbe-4df1-a7eb-c0113a3ba45erds"
+            }
+        ]
+    },
+    "relation_id": "f29920b6-db5c-4b5b-9696-c9b3bda2e60c",
+    "relation_type": "tools",
+    "install_key": null,
+    "component_id": null,
+    "container_id": "f81fb78f-f029-4132-bcd9-fabc11f14eb7",
+    "parent_component_id": null,
+    "input_component_ids": [
+        "75087620-2ff8-4045-8694-a0c19aac12fc"
+    ],
+    "output_component_ids": null,
+    "order_index": 23,
+    "version": "v1.0.9"
+}

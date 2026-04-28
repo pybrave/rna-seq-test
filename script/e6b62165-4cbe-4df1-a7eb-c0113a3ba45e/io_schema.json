@@ -1,0 +1,20 @@
+{
+    "inputs": [
+        {
+            "name": "rds",
+            "type": "file",
+            "required": true
+        }
+    ],
+    "outputs": [],
+    "params": [],
+    "resources": {
+        "cpu": 4,
+        "memory": "6GB",
+        "docker": "quay.io/biocontainers/trim-galore:0.6.7"
+    },
+    "ui": {
+        "icon": "scissors",
+        "color": "magenta"
+    }
+}

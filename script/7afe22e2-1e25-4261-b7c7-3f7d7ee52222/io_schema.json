@@ -1,0 +1,31 @@
+{
+    "inputs": [
+        {
+            "name": "reference_genome",
+            "label": "Reference Genome Index Path",
+            "type": "BaseInput",
+            "required": true,
+            "rules": [
+                {
+                    "required": true,
+                    "message": "Please specify the reference genome index path"
+                }
+            ]
+        }
+    ],
+    "outputs": [
+        {
+            "name": "index",
+            "type": "file"
+        }
+    ],
+    "resources": {
+        "cpu": 4,
+        "memory": "6GB",
+        "docker": "quay.io/biocontainers/trim-galore:0.6.7"
+    },
+    "ui": {
+        "icon": "scissors",
+        "color": "magenta"
+    }
+}

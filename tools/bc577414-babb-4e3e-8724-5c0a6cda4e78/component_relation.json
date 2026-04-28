@@ -1,0 +1,82 @@
+{
+    "name": "BWA\u6bd4\u5bf9\u5de5\u5177",
+    "img": null,
+    "tags": null,
+    "category": "default",
+    "description": null,
+    "prompt": null,
+    "dag_definition": {
+        "nodes": [
+            {
+                "script_id": "e3d00582-2a99-4b02-a687-65e556f7aefa",
+                "position": {
+                    "x": 411.126903989516,
+                    "y": 104.86368616667025
+                }
+            },
+            {
+                "script_id": "cbd1a1cc-ca62-46da-8713-b0e868a2d44f",
+                "position": {
+                    "x": 235.92399080499268,
+                    "y": 39.337572775903865
+                }
+            },
+            {
+                "script_id": "759d6899-e632-400f-9b11-6a8b7b6e2042",
+                "position": {
+                    "x": 31.488764044944006,
+                    "y": 55.19101123595505
+                }
+            },
+            {
+                "script_id": "7afe22e2-1e25-4261-b7c7-3f7d7ee52222",
+                "position": {
+                    "x": 46,
+                    "y": 135.75
+                }
+            }
+        ],
+        "edges": [
+            {
+                "source": "759d6899-e632-400f-9b11-6a8b7b6e2042",
+                "sourceHandle": "fastq1_trimmed",
+                "target": "cbd1a1cc-ca62-46da-8713-b0e868a2d44f",
+                "targetHandle": "fastq1",
+                "id": "xy-edge__759d6899-e632-400f-9b11-6a8b7b6e2042fastq1_trimmed-cbd1a1cc-ca62-46da-8713-b0e868a2d44ffastq1"
+            },
+            {
+                "source": "759d6899-e632-400f-9b11-6a8b7b6e2042",
+                "sourceHandle": "fastq2_trimmed",
+                "target": "cbd1a1cc-ca62-46da-8713-b0e868a2d44f",
+                "targetHandle": "fastq2",
+                "id": "xy-edge__759d6899-e632-400f-9b11-6a8b7b6e2042fastq2_trimmed-cbd1a1cc-ca62-46da-8713-b0e868a2d44ffastq2"
+            },
+            {
+                "source": "cbd1a1cc-ca62-46da-8713-b0e868a2d44f",
+                "sourceHandle": "bam",
+                "target": "e3d00582-2a99-4b02-a687-65e556f7aefa",
+                "targetHandle": "bam",
+                "id": "xy-edge__cbd1a1cc-ca62-46da-8713-b0e868a2d44fbam-e3d00582-2a99-4b02-a687-65e556f7aefabam"
+            },
+            {
+                "source": "7afe22e2-1e25-4261-b7c7-3f7d7ee52222",
+                "sourceHandle": "index",
+                "target": "cbd1a1cc-ca62-46da-8713-b0e868a2d44f",
+                "targetHandle": "index",
+                "id": "xy-edge__7afe22e2-1e25-4261-b7c7-3f7d7ee52222index-cbd1a1cc-ca62-46da-8713-b0e868a2d44findex"
+            }
+        ]
+    },
+    "relation_id": "bc577414-babb-4e3e-8724-5c0a6cda4e78",
+    "relation_type": "tools",
+    "install_key": null,
+    "component_id": "759d6899-e632-400f-9b11-6a8b7b6e2042",
+    "container_id": "f81fb78f-f029-4132-bcd9-fabc11f14eb7",
+    "parent_component_id": null,
+    "input_component_ids": [
+        "fdc5fe2a-fd4e-4acc-aab1-a7bcbe6d8119"
+    ],
+    "output_component_ids": null,
+    "order_index": 20,
+    "version": "v1.1.0"
+}

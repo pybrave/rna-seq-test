@@ -1,0 +1,76 @@
+{
+    "scatter": {
+        "field": "reads",
+        "mode": "each"
+    },
+    "inputs": [
+        {
+            "name": "fastq1",
+            "type": "BaseInput",
+            "required": true
+        },
+        {
+            "name": "fastq2",
+            "type": "BaseInput",
+            "required": true
+        }
+    ],
+    "workflow": [
+        {
+            "name": "group_field",
+            "label": "Group Field",
+            "rules": [
+                {
+                    "required": true,
+                    "message": "This field cannot be empty!"
+                }
+            ],
+            "type": "GroupFieldSelect"
+        },
+        {
+            "name": "reads",
+            "label": "worklow reads",
+            "rules": [
+                {
+                    "required": true,
+                    "message": "\u8be5\u5b57\u6bb5\u4e0d\u80fd\u4e3a\u7a7a!"
+                }
+            ],
+            "type": "GroupSelectSampleButton",
+            "component_id": "fdc5fe2a-fd4e-4acc-aab1-a7bcbe6d8119",
+            "group": "group_field",
+            "db": true
+        }
+    ],
+    "outputs": [
+        {
+            "name": "fastq1_trimmed",
+            "type": "file",
+            "pattern": "*_trimmed.fastq1.gz",
+            "required": true
+        },
+        {
+            "name": "fastq2_trimmed",
+            "type": "file",
+            "pattern": "*_trimmed.fastq2.gz",
+            "required": true
+        }
+    ],
+    "params": [
+        {
+            "name": "minlen",
+            "label": "minlen",
+            "type": "BaseInputNumber",
+            "default": 30
+        }
+    ],
+    "resources": {
+        "cpu": 4,
+        "memory": "6GB",
+        "docker": "quay.io/biocontainers/trim-galore:0.6.7"
+    },
+    "ui": {
+        "icon": "scissors",
+        "color": "magenta"
+    }
+}

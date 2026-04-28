@@ -1,0 +1,39 @@
+{
+    "inputs": [
+        {
+            "name": "deg",
+            "type": "file",
+            "required": true
+        }
+    ],
+    "outputs": [
+        {
+            "name": "gene_id_mapping",
+            "type": "file",
+            "pattern": "gene_id_mapping.tsv",
+            "required": true
+        },
+        {
+            "name": "kegg_enrichment",
+            "type": "file",
+            "pattern": "kegg_enrichment.tsv",
+            "required": true
+        },
+        {
+            "name": "kegg_enrich_rds",
+            "type": "file",
+            "pattern": "kegg_enrich.rds",
+            "required": true
+        }
+    ],
+    "params": [],
+    "resources": {
+        "cpu": 4,
+        "memory": "6GB",
+        "docker": "quay.io/biocontainers/trim-galore:0.6.7"
+    },
+    "ui": {
+        "icon": "scissors",
+        "color": "magenta"
+    }
+}

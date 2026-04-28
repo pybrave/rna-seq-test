@@ -1,0 +1,102 @@
+{
+    "formJson": [
+        {
+            "name": "filter_by",
+            "label": "filter by",
+            "type": "BaseSelect",
+            "initialValue": "p",
+            "data": [
+                {
+                    "label": "p value",
+                    "value": "p"
+                },
+                {
+                    "label": "q value",
+                    "value": "q"
+                }
+            ]
+        },
+        {
+            "name": "species",
+            "label": "species",
+            "type": "BaseSelect",
+            "initialValue": "hsa",
+            "data": [
+                {
+                    "label": "Homo sapiens (hsa)",
+                    "value": "hsa"
+                },
+                {
+                    "label": "Mus musculus (mmu)",
+                    "value": "mmu"
+                },
+                {
+                    "label": "Rattus norvegicus (rno)",
+                    "value": "rno"
+                },
+                {
+                    "label": "Danio rerio (dre)",
+                    "value": "dre"
+                },
+                {
+                    "label": "Arabidopsis thaliana (ath)",
+                    "value": "ath"
+                },
+                {
+                    "label": "Saccharomyces cerevisiae (sce)",
+                    "value": "sce"
+                },
+                {
+                    "label": "Caenorhabditis elegans (cel)",
+                    "value": "cel"
+                },
+                {
+                    "label": "Drosophila melanogaster (dme)",
+                    "value": "dme"
+                }
+            ]
+        },
+        {
+            "name": "gene_id_type",
+            "label": "gene id type",
+            "type": "BaseSelect",
+            "initialValue": "symbol",
+            "data": [
+                {
+                    "label": "SYMBOL (convert to ENTREZID)",
+                    "value": "symbol"
+                },
+                {
+                    "label": "ENTREZID",
+                    "value": "entrez"
+                },
+                {
+                    "label": "KEGG",
+                    "value": "kegg"
+                },
+                {
+                    "label": "UniProt",
+                    "value": "uniprot"
+                }
+            ]
+        },
+        {
+            "name": "cutoff",
+            "label": "cutoff",
+            "type": "BaseInputNumber",
+            "initialValue": 0.05,
+            "min": 0,
+            "max": 1,
+            "step": 0.001
+        },
+        {
+            "name": "top_n",
+            "label": "top pathways for plot",
+            "type": "BaseInputNumber",
+            "initialValue": 20,
+            "min": 1,
+            "max": 100,
+            "step": 1
+        }
+    ]
+}

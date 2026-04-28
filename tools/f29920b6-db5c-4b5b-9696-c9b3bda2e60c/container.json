@@ -1,0 +1,47 @@
+[
+    {
+        "container_id": "af90160b-f9d3-493f-b1ad-aa59ca60bc59",
+        "container_key": null,
+        "name": "maaslin2",
+        "image": "registry.cn-hangzhou.aliyuncs.com/wybioinfo/maaslin2:1.22",
+        "img": null,
+        "image_status": "exist",
+        "description": "https://rocker-project.org/images/versioned/rstudio.html\nhttps://www.bioconductor.org/help/docker/\nhttps://hub.docker.com/r/bioconductor/tidyverse/tags",
+        "version": null,
+        "envionment": "{\n    \"DISABLE_AUTH\": true,\n    \"USERID\": \"$USERID\",\n    \"GROUPID\": \"$GROUPID\",\n    \"R_USER_WORKDIR\": \"$OUTPUT_DIR\",\n    \"R_SCRIPT\": \"$SCRIPT_FILE\",\n    \"R_LIBS_USER\":\"$R_PACKAGE_DIR\"\n}",
+        "command": "/init",
+        "port": "8787",
+        "labels": "  {\n  \"traefik.enable\": \"true\",\n  \"traefik.http.routers.$CONTAINER_NAME.rule\": \"PathPrefix(`/$URL_PREFIX`)\",\n  \"traefik.http.routers.$CONTAINER_NAME.entrypoints\": \"web\",\n  \"traefik.http.services.$CONTAINER_NAME.loadbalancer.server.port\": \"8787\",\n  \"traefik.http.middlewares.$CONTAINER_NAME-strip.stripPrefix.prefixes\": \"/$URL_PREFIX\",\n  \"traefik.http.middlewares.$CONTAINER_NAME-strip.stripPrefix.forceSlash\": \"false\",\n  \"traefik.http.middlewares.$CONTAINER_NAME-server-root-path-header.headers.customrequestheaders.X-RStudio-Root-Path\": \"/$URL_PREFIX\",\n  \"traefik.http.routers.$CONTAINER_NAME.middlewares\": \"$CONTAINER_NAME-strip,$CONTAINER_NAME-server-root-path-header\"\n}",
+        "change_uid": false
+    },
+    {
+        "container_id": "192d6e07-4082-4070-a9b1-6aa9d4770b16",
+        "container_key": null,
+        "name": "deseq2",
+        "image": "registry.cn-hangzhou.aliyuncs.com/wybioinfo/deseq2",
+        "img": null,
+        "image_status": "exist",
+        "description": "",
+        "version": null,
+        "envionment": "{\n    \"DISABLE_AUTH\": true,\n    \"USERID\": \"$USERID\",\n    \"GROUPID\": \"$GROUPID\",\n    \"R_USER_WORKDIR\": \"$OUTPUT_DIR\",\n    \"R_SCRIPT\": \"$SCRIPT_FILE\",\n    \"R_LIBS_USER\":\"$R_PACKAGE_DIR\"\n}",
+        "command": "/init",
+        "port": "8787",
+        "labels": "  {\n  \"traefik.enable\": \"true\",\n  \"traefik.http.routers.$CONTAINER_NAME.rule\": \"PathPrefix(`/$URL_PREFIX`)\",\n  \"traefik.http.routers.$CONTAINER_NAME.entrypoints\": \"web\",\n  \"traefik.http.services.$CONTAINER_NAME.loadbalancer.server.port\": \"8787\",\n  \"traefik.http.middlewares.$CONTAINER_NAME-strip.stripPrefix.prefixes\": \"/$URL_PREFIX\",\n  \"traefik.http.middlewares.$CONTAINER_NAME-strip.stripPrefix.forceSlash\": \"false\",\n  \"traefik.http.middlewares.$CONTAINER_NAME-server-root-path-header.headers.customrequestheaders.X-RStudio-Root-Path\": \"/$URL_PREFIX\",\n  \"traefik.http.routers.$CONTAINER_NAME.middlewares\": \"$CONTAINER_NAME-strip,$CONTAINER_NAME-server-root-path-header\"\n}",
+        "change_uid": false
+    },
+    {
+        "container_id": "07252ea9-8d3e-45f1-9438-e7ec58acfa7e",
+        "container_key": null,
+        "name": "clusterprofiler",
+        "image": "registry.cn-hangzhou.aliyuncs.com/wybioinfo/clusterprofiler",
+        "img": null,
+        "image_status": "exist",
+        "description": null,
+        "version": null,
+        "envionment": "{\n    \"DISABLE_AUTH\": true,\n    \"USERID\": \"$USERID\",\n    \"GROUPID\": \"$GROUPID\",\n    \"R_USER_WORKDIR\": \"$OUTPUT_DIR\",\n    \"R_SCRIPT\": \"$SCRIPT_FILE\",\n    \"R_LIBS_USER\":\"$R_PACKAGE_DIR\"\n}",
+        "command": "/init",
+        "port": "8787",
+        "labels": "  {\n  \"traefik.enable\": \"true\",\n  \"traefik.http.routers.$CONTAINER_NAME.rule\": \"PathPrefix(`/$URL_PREFIX`)\",\n  \"traefik.http.routers.$CONTAINER_NAME.entrypoints\": \"web\",\n  \"traefik.http.services.$CONTAINER_NAME.loadbalancer.server.port\": \"8787\",\n  \"traefik.http.middlewares.$CONTAINER_NAME-strip.stripPrefix.prefixes\": \"/$URL_PREFIX\",\n  \"traefik.http.middlewares.$CONTAINER_NAME-strip.stripPrefix.forceSlash\": \"false\",\n  \"traefik.http.middlewares.$CONTAINER_NAME-server-root-path-header.headers.customrequestheaders.X-RStudio-Root-Path\": \"/$URL_PREFIX\",\n  \"traefik.http.routers.$CONTAINER_NAME.middlewares\": \"$CONTAINER_NAME-strip,$CONTAINER_NAME-server-root-path-header\"\n}",
+        "change_uid": false
+    }
+]

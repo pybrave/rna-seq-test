@@ -1,0 +1,61 @@
+{
+    "inputs": [
+        {
+            "name": "deg",
+            "type": "file",
+            "required": true
+        }
+    ],
+    "outputs": [
+        {
+            "name": "filtered_deg",
+            "type": "file",
+            "pattern": "filtered_deg.tsv",
+            "required": true
+        },
+        {
+            "name": "kegg_enrichment",
+            "type": "file",
+            "pattern": "kegg_enrichment.tsv",
+            "required": true
+        },
+        {
+            "name": "kegg_enrichment_plot",
+            "type": "file",
+            "pattern": "kegg_enrichment_barplot.pdf"
+        },
+        {
+            "name": "report",
+            "type": "file",
+            "pattern": "output.md",
+            "required": true
+        }
+    ],
+    "params": {
+        "filter_by": {
+            "type": "string",
+            "default": "p"
+        },
+        "species": {
+            "type": "string",
+            "default": "hsa"
+        },
+        "cutoff": {
+            "type": "number",
+            "default": 0.05
+        },
+        "top_n": {
+            "type": "number",
+            "default": 20
+        }
+    },
+    "resources": {
+        "cpu": 4,
+        "memory": "6GB",
+        "docker": "quay.io/biocontainers/trim-galore:0.6.7"
+    },
+    "ui": {
+        "icon": "scissors",
+        "color": "magenta"
+    }
+}
